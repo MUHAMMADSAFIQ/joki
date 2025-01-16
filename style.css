@@ -1,0 +1,792 @@
+/* Base Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  scroll-behavior: smooth;
+}
+
+header {
+  background-color: #00796b;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Navbar Styling */
+.navbar {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navbar a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+/* Hamburger Icon */
+.hamburger-icon {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+}
+
+.hamburger-icon div {
+  background-color: white;
+  height: 3px;
+  width: 100%;
+}
+
+/* Navbar Links */
+.navbar-links {
+  display: flex;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  margin: 0 15px;
+}
+
+.navbar-links a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile View (Hamburger Menu) */
+@media (max-width: 768px) {
+  .navbar {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  /* Hide navbar links on mobile by default */
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    background-color: #00796b;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  /* Show the navbar links when the hamburger icon is clicked */
+  .navbar-links.show {
+    display: flex;
+  }
+
+  /* Display hamburger icon on mobile */
+  .hamburger-icon {
+    display: flex;
+  }
+}
+
+.page {
+  max-width: 1400px;
+  margin: 20px auto;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.Bio-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  align-items: center;
+}
+
+.bio-img {
+  width: 150px;
+
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+  border: 5px solid #00b894;
+  flex-shrink: 0;
+}
+
+.bio-info {
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #333333;
+  line-height: 1.5;
+}
+
+.bio-info span {
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .Bio-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+/* Heading Style */
+
+.matkul-card,
+.project-card,
+.testimonial-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+}
+
+.matkul-card img,
+.project-card img {
+  width: 80%;
+  max-width: 150px;
+  border-radius: 10px;
+}
+
+.contact-button {
+  padding: 10px 20px;
+  background-color: #00796b;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.contact-button:hover {
+  background-color: #005a4c;
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 30px;
+}
+
+.contact-item {
+  text-align: center;
+}
+
+.contact-icon {
+  font-size: 40px;
+  color: #00796b;
+}
+
+.contact-icon:hover {
+  color: #005a4c;
+}
+
+.map {
+  height: 400px;
+  width: 100%;
+  background-color: #eee;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    position: relative;
+    top: 0;
+    right: 0;
+    text-align: center;
+  }
+
+  .navbar a {
+    display: block;
+    margin: 10px 0;
+  }
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  scroll-behavior: smooth; /* Gulir halus saat klik link navbar */
+}
+
+/* Navbar Fixed */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #00796b;
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+  z-index: 1000; /* Agar navbar tetap di atas */
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+/* Tambahkan padding pada body agar konten tidak tertutupi oleh navbar fixed */
+body {
+  padding-top: 100px; /* Sesuaikan padding dengan tinggi navbar */
+}
+
+.page {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.matkul-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+}
+
+.matkul-card img {
+  width: 80%;
+  max-width: 150px;
+  border-radius: 10px;
+}
+
+/* Ikon Kontak */
+.contact-icons {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 30px;
+}
+
+.contact-item {
+  text-align: center;
+}
+
+.contact-icon {
+  font-size: 40px;
+  color: #00796b;
+}
+
+.contact-icon:hover {
+  color: #005a4c;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .navbar a {
+    margin: 10px 0;
+  }
+}
+/* Gaya Dasar */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  scroll-behavior: smooth; /* Gulir halus saat klik link navbar */
+}
+
+/* Navbar Fixed */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #00796b;
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+  z-index: 1000; /* Pastikan navbar berada di atas */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan pada navbar */
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+/* Tambahkan padding pada body agar konten tidak tertutupi oleh navbar fixed */
+body {
+  padding-top: 100px; /* Sesuaikan padding dengan tinggi navbar */
+}
+
+/* Gaya untuk Halaman */
+.page {
+  padding: 50px 20px;
+  text-align: center;
+  margin-top: 100px; /* Menambahkan margin untuk memberikan ruang setelah navbar */
+}
+
+/* Kartu Matkul */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.matkul-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out; /* Tambahkan efek transisi pada kartu */
+}
+
+.matkul-card img {
+  width: 80%;
+  max-width: 150px;
+  border-radius: 10px;
+}
+
+.matkul-card:hover {
+  transform: translateY(-10px); /* Efek hover: kartu sedikit terangkat */
+}
+
+/* Ikon Kontak */
+.contact-icons {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 30px;
+  padding: 20px 0;
+}
+
+.contact-item {
+  text-align: center;
+}
+
+.contact-icon {
+  font-size: 40px;
+  color: #00796b;
+}
+
+.contact-icon:hover {
+  color: #005a4c;
+}
+
+.contact-item p {
+  font-size: 14px;
+  color: #333;
+  margin-top: 5px;
+}
+
+/* Responsif untuk Mobile */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .navbar a {
+    margin: 10px 0;
+  }
+
+  .contact-icons {
+    flex-direction: column;
+  }
+}
+
+/* Tambahkan padding-top ke elemen ID untuk menghindari konten tertutup navbar */
+#Matkul,
+#project,
+#testimoni,
+#kontak {
+  padding-top: 120px; /* Pastikan ada ruang cukup setelah navbar */
+  margin-top: 20px;
+}
+/* Gaya Dasar */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  scroll-behavior: smooth; /* Gulir halus saat klik link navbar */
+}
+
+/* Navbar Fixed */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #00796b;
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+  z-index: 1000; /* Pastikan navbar berada di atas */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan pada navbar */
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+/* Tambahkan padding pada body agar konten tidak tertutupi oleh navbar fixed */
+body {
+  padding-top: 100px; /* Sesuaikan padding dengan tinggi navbar */
+}
+
+/* Gaya untuk Halaman */
+.page {
+  padding: 50px 20px;
+  text-align: center;
+  margin-top: 100px; /* Menambahkan margin untuk memberikan ruang setelah navbar */
+}
+
+/* Kartu Matkul */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.matkul-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out; /* Tambahkan efek transisi pada kartu */
+}
+
+.matkul-card img {
+  width: 80%;
+  max-width: 150px;
+  border-radius: 10px;
+}
+
+.matkul-card:hover {
+  transform: translateY(-10px); /* Efek hover: kartu sedikit terangkat */
+}
+
+/* Kartu Testimoni */
+.testimoni-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out; /* Efek transisi pada kartu */
+}
+
+.testimoni-card img {
+  width: 80%;
+  max-width: 150px;
+  border-radius: 50%; /* Membuat foto berbentuk bulat */
+  margin-bottom: 15px;
+}
+
+.testimoni-card p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.testimoni-card h3 {
+  font-size: 18px;
+  color: #00796b;
+}
+
+.testimoni-card:hover {
+  transform: translateY(-10px); /* Efek hover: kartu sedikit terangkat */
+}
+
+/* Ikon Kontak */
+.contact-icons {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 30px;
+  padding: 20px 0;
+}
+
+.contact-item {
+  text-align: center;
+}
+
+.contact-icon {
+  font-size: 40px;
+  color: #00796b;
+}
+
+.contact-icon:hover {
+  color: #005a4c;
+}
+
+.contact-item p {
+  font-size: 14px;
+  color: #333;
+  margin-top: 5px;
+}
+
+/* Responsif untuk Mobile */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .navbar a {
+    margin: 10px 0;
+  }
+
+  .contact-icons {
+    flex-direction: column;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimoni-card {
+    width: 90%; /* Sesuaikan ukuran kartu testimoni di layar kecil */
+  }
+}
+/* Gaya Dasar */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  scroll-behavior: smooth; /* Gulir halus saat klik link navbar */
+}
+
+/* Navbar Fixed */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #00796b;
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+  z-index: 1000; /* Pastikan navbar berada di atas */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan pada navbar */
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+/* Tambahkan padding pada body agar konten tidak tertutupi oleh navbar fixed */
+body {
+  padding-top: 100px; /* Sesuaikan padding dengan tinggi navbar */
+}
+
+/* Gaya untuk Halaman */
+.page {
+  padding: 50px 20px;
+  text-align: center;
+  margin-top: 100px; /* Menambahkan margin untuk memberikan ruang setelah navbar */
+}
+
+/* Biodata Diri */
+.bio-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.bio-img {
+  width: 150px;
+  border-radius: 50%;
+}
+
+.bio-container h3 {
+  font-size: 24px;
+  color: #333;
+}
+
+/* Kartu Matkul */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.matkul-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out; /* Tambahkan efek transisi pada kartu */
+}
+
+.matkul-card img {
+  width: 80%;
+  max-width: 150px;
+  border-radius: 10px;
+}
+
+.matkul-card:hover {
+  transform: translateY(-10px); /* Efek hover: kartu sedikit terangkat */
+}
+
+/* Kartu Testimoni */
+.testimoni-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out; /* Efek transisi pada kartu */
+}
+
+.testimoni-card img {
+  width: 80%;
+  max-width: 150px;
+  border-radius: 50%; /* Membuat foto berbentuk bulat */
+  margin-bottom: 15px;
+}
+
+.testimoni-card p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.testimoni-card h3 {
+  font-size: 18px;
+  color: #00796b;
+}
+
+.testimoni-card:hover {
+  transform: translateY(-10px); /* Efek hover: kartu sedikit terangkat */
+}
+
+/* Ikon Kontak */
+.contact-icons {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 30px;
+  padding: 20px 0;
+}
+
+.contact-item {
+  text-align: center;
+}
+
+.contact-icon {
+  font-size: 40px;
+  color: #00796b;
+}
+
+.contact-icon:hover {
+  color: #005a4c;
+}
+
+.contact-item p {
+  font-size: 14px;
+  color: #333;
+  margin-top: 5px;
+}
+
+/* Responsif untuk Mobile */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .navbar a {
+    margin: 10px 0;
+  }
+
+  .contact-icons {
+    flex-direction: column;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bio-container {
+    padding: 20px;
+  }
+
+  .matkul-card,
+  .testimoni-card {
+    width: 90%; /* Sesuaikan ukuran kartu di layar kecil */
+  }
+}
